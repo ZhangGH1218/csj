@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/zhangguohui/Desktop/index.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致CSJ·我的大王🎂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #FFF9C4;
+            font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif;
+            color: #333;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cover {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .cover h1 {
+            font-size: 36px;
+            color: #FF80AB;
+            margin: 10px 0;
+        }
+        .cover p {
+            font-size: 20px;
+            color: #81D4FA;
+        }
+        .cover img {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .letter {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .letter::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid #FFD54F;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        .letter h2 {
+            color: #81D4FA;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .letter p {
+            font-size: 18px;
+            margin: 18px 0;
+            text-indent: 2em;
+            position: relative;
+            z-index: 1;
+        }
+        .highlight {
+            color: #FF80AB;
+            font-weight: bold;
+        }
+        .photo-wall {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .photo-wall h2 {
+            color: #FFD54F;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .photo-item {
+            width: 160px;
+        }
+        .photo-item img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .photo-item img:hover {
+            transform: scale(1.05);
+        }
+        .photo-item p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 16px;
+            color: #666;
+            padding-bottom: 40px;
+        }
+    </style>
+    <style>
+.dynamic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-item {
+  position: absolute;
+  opacity: 0.5;
+  animation: floatDown 10s infinite linear;
+  font-size: 24px;
+}
+
+.floating-item::before {
+  content: "💖";
+}
+
+.floating-item:nth-child(2n)::before {
+  content: "✨";
+}
+.floating-item:nth-child(3n)::before {
+  content: "🌸";
+}
+
+.floating-item:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+.floating-item:nth-child(2) {
+  left: 15%;
+  animation-delay: 0.8s;
+}
+.floating-item:nth-child(3) {
+  left: 25%;
+  animation-delay: 1.6s;
+}
+.floating-item:nth-child(4) {
+  left: 35%;
+  animation-delay: 2.4s;
+}
+.floating-item:nth-child(5) {
+  left: 45%;
+  animation-delay: 3.2s;
+}
+.floating-item:nth-child(6) {
+  left: 55%;
+  animation-delay: 4s;
+}
+.floating-item:nth-child(7) {
+  left: 65%;
+  animation-delay: 4.8s;
+}
+.floating-item:nth-child(8) {
+  left: 75%;
+  animation-delay: 5.6s;
+}
+.floating-item:nth-child(9) {
+  left: 85%;
+  animation-delay: 6.4s;
+}
+.floating-item:nth-child(10) {
+  left: 95%;
+  animation-delay: 7.2s;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+</style>
+</head>
+<body>
+  <audio id="birthdayMusic" src="audio.mp3" loop muted playsinline></audio>
+<button style="position:fixed;top:20px;right:20px;z-index:9999;padding:10px 20px;border:none;background:#ff6b81;color:#fff;border-radius:25px;cursor:pointer;font-size:16px;" onclick="document.getElementById('birthdayMusic').muted=false;document.getElementById('birthdayMusic').play()">🎂 播放生日歌</button>
+ <div class="dynamic-bg"></div>
+ <script>
+    const bg = document.querySelector('.dynamic-bg');
+    const total = 550;
+
+    for (let i = 0; i < total; i++) {
+      const item = document.createElement('div');
+      item.classList.add('floating-item');
+      item.style.left = Math.random() * 100 + '%';
+      item.style.animationDelay = Math.random() * 10 + 's';
+      item.style.fontSize = (16 + Math.random() * 16) + 'px';
+      bg.appendChild(item);
+    }
+  </script>
+</div>
+    <div class="container">
+        
+        <div class="cover">
+            <h1>🎉 致CSJ·我的大王 🎉</h1>
+            <p>✨ 生日快乐，愿你永远被偏爱与温柔包围 ✨</p></div>
+
+        
+        <div class="letter">
+            <h2>📜 致我的大王</h2>
+            <p>展信安。
+今天是大王的生日，提笔(用笔打了很多次草稿修改，才打电脑上的)这封信时，又想起我生日那天，你亲手画的信——字迹一笔一画都藏着认真，小画也软乎乎的，我翻来覆去看了好多遍。被人这样放在心上的暖意，到今天想起依旧清晰。</p>
+            <p>认识三个月(后面再看的话就不止啦，我是2026寒假时候写的)，见面不多却和大王相处得格外舒服。你会把爱吃的零食分给我，我也用心回赠小小心意，一来一回都是我和大王之间不用多说的默契。最让我记在心里的，是金工实习那几天——大王其实不太会打乒乓球，我一点点教你握拍、发球、接球，你学得慢却特别认真，哪怕自己还没摸透技巧，下午还要赶去学习，却连续三个中午来陪我练球，明明自己也累，也没说过一句不想来，这份明明不太会玩，却愿意为了陪我而认真学、坚持来的心意，比任何球技进步都让我感动，也让我更觉得大王是超珍贵的朋友。
+
+</p>
+            <p>大王总觉得自己不够好，可在我眼里，大王最珍贵的就是这份真诚和温柔：愿意大方分享，愿意花时间陪伴，哪怕偶尔没顾及到我的情绪，也会慌着用最直白的方式在乎我，怕我难过、怕我疏远，这份掏心掏肺的真心，本身就足够耀眼。不用总否定自己，大王用心对待身边人的样子，就已经很可爱了，新的一岁，也愿我的大王永远带着这份温柔，被世界好好偏爱。</p>
+            <p>大学的日子过得快，未来或许会慢慢走远，但我从不觉得遗憾，反而很庆幸，在这段最鲜活的年纪，能遇到大王这样珍贵的朋友——相处起来舒服又踏实，不用刻意讨好，不用勉强维系，这份和大王之间真诚的友谊就够了。</p>
+            <p>生日快乐，我的大王。愿这段和大王一起打球的回忆，像球台边飘着的笑声，脆脆的、暖暖的，混着球拍碰球的轻响、捡球时的小嘟囔，在那天的午后风里绕了一圈又一圈；更愿多年后你再翻到这封信，像一颗温软的子弹正中眉心——瞬间就被拉回那个夏天的午后，猝不及防就被那时毫无顾忌的快乐撞个满怀，所有细碎的美好都清晰得像昨天刚发生。也愿我的大王新的一岁，所有小期待都能实现，球技慢慢进步，永远做最耀眼、最开心的自己。</p>
+        </div>
+
+        
+        <div class="photo-wall">
+            <h2>📸 我们的小碎片 📸</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="pic1.jpg">
+                    <p>大王陪我练球🏓</p>
+                </div>
+                <div class="photo-item">
+                    <img src="pic2.jpg">
+                    <p>大王给我的黄瓜味薯片🍬</p>
+                </div>
+                <div class="photo-item">
+                    <img src="pic3.jpg">
+                    <p>大王亲手写的信💌</p>
+                </div>
+                <div style="background-color: #fff; border-radius: 15px; padding: 25px; margin-top: 30px; text-align: center;">
+    <h2 style="color: #ff69b4; font-size: 22px; margin-bottom: 15px;">生日快乐，我的CSJ大王!</h2>
+    <p style="font-size: 16px; color: #333; line-height: 1.8; margin-bottom: 20px;">愿你永远被爱，永远可爱，永远做最自在的自己 💖</p >
+    <p style="font-size: 18px; font-weight: bold; color: #333;">—— 你永远的好朋友张国辉</p >
+    <p style="font-size: 14px; color: #999; margin-top: 10px;">2026.01.27（认识的第四个月）</p >
+</div>
+             </div></div></div></body></html>
