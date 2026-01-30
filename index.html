@@ -269,6 +269,7 @@
             background: linear-gradient(to right, #ff6b9d, #c44569, #f8b500);
             background-size: 200% 200%;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: gradientText 3s ease infinite;
             margin: 20px 0;
@@ -284,7 +285,6 @@
                 transform: scale(1.05);
             }
         }
-
         .text-breathe {
             font-size: 22px;
             color: #555;
@@ -297,16 +297,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        
+        }   
         body {
             background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
             min-height: 100vh;
             font-family: "Microsoft YaHei", sans-serif;
             padding: 40px 20px;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -319,8 +316,6 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
-
-
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -331,14 +326,12 @@
                 transform: translateY(0);
             }
         }
-
         .title-fade-in {
             font-size: 36px;
             color: #333;
             margin-bottom: 20px;
             animation: fadeInUp 1.2s ease-out 0.2s forwards;
         }
-
         @keyframes gradientText {
             0% {
                 background-position: 0% 50%;
@@ -350,7 +343,6 @@
                 background-position: 0% 50%;
             }
         }
-
         .text-gradient {
             font-size: 28px;
             background: linear-gradient(to right, #ff6b9d, #c44569, #f8b500);
@@ -360,7 +352,6 @@
             animation: gradientText 3s ease infinite;
             margin: 20px 0;
         }
-
         @keyframes breathe {
             0%, 100% {
                 opacity: 1;
@@ -371,14 +362,12 @@
                 transform: scale(1.05);
             }
         }
-
         .text-breathe {
             font-size: 22px;
             color: #555;
             line-height: 1.8;
             animation: breathe 2.5s ease-in-out infinite;
         }
-    /* 启动页专属样式 */
 .splash-screen {
   position: fixed;
   top: 0;
@@ -426,7 +415,6 @@
   50% { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffb300, 0 0 60px #ffd700; }
 }
 
-/* 信件初始隐藏（仅这两行，精准控制） */
 .container, .card {
   opacity: 1;
   visibility: visible;
@@ -434,12 +422,11 @@
 }
     </style>
 </head>
-
 <body>
 <div class="splash-screen" id="splash">
   <div class="signature-wrap">
-    <div class="signature-placeholder">陈水娟</div>
-    <div class="signature">陈水娟</div>
+    <div class="signature-placeholder">陈水娟生日快乐！</div>
+    <div class="signature">陈水娟生日快乐！</div>
   </div>
 </div>
     <div class="container">
@@ -449,7 +436,7 @@
             <p class="text-gradient">愿所有美好，都如约而至</p>
             
             <p class="text-breathe" style="background: linear-gradient(90deg, #27ae60, #2ecc71, #3498db); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">
-                希望你一切都好，希望所有俗套的祝福都在你身上灵验，希望你快乐，不止生日<br>
+                希望你一切都好，希望所有俗套的祝福都在你身上灵验，希望你快乐不止于生日<br>
             
             </p>
         </div>
@@ -491,9 +478,7 @@
             <p style="background: linear-gradient(90deg, #00fff5, #7928ca, #ff0080); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">大王总觉得自己不够好，可在我眼里，大王最珍贵的就是这份真诚和温柔：愿意大方分享，愿意花时间陪伴，哪怕偶尔没顾及到我的情绪，也会慌着用最直白的方式在乎我，怕我难过、怕我疏远，这份掏心掏肺的真心，本身就足够耀眼。不用总否定自己，大王用心对待身边人的样子，就已经很可爱了，新的一岁，也愿我的大王永远带着这份温柔，被世界好好偏爱。</p>
            <p style="background: linear-gradient(90deg, #ff7f50, #ff4500, #9932cc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">大学的日子过得快，未来或许会慢慢走远，但我从不觉得遗憾，反而很庆幸，在这段最鲜活的年纪，能遇到大王这样珍贵的朋友——相处起来舒服又踏实，不用刻意讨好，不用勉强维系，这份和大王之间真诚的友谊就够了。</p>
             <p style="background: linear-gradient(90deg, #8b4513, #cd853f, #d2691e); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">生日快乐，我的大王。愿这段和大王一起打球的回忆，像球台边飘着的笑声，脆脆的、暖暖的，混着球拍碰球的轻响、捡球时的小嘟囔，在那天的午后风里绕了一圈又一圈；更愿多年后你再翻到这封信，像一颗温软的子弹正中眉心——瞬间就被拉回那个夏天的午后，猝不及防就被那时毫无顾忌的快乐撞个满怀，所有细碎的美好都清晰得像昨天刚发生。也愿我的大王新的一岁，所有小期待都能实现，球技慢慢进步，永远做最耀眼、最开心的自己。</p><!-- 张国辉写的！！！ -->
-        </div><!-- 张国辉写的！！！ -->
-
-        
+        </div><!-- 张国辉写的！！！ -->  
         <div class="photo-wall"><!-- 张国辉写的！！！ -->
             <h2>📸 我们的小碎片 📸</h2><!-- 张国辉写的！！！ -->
             <div class="photo-grid"><!-- 张国辉写的！！！ -->
@@ -556,17 +541,12 @@ document.getElementById('playBtn').addEventListener('click', function() {
 });
 </script>
 <script>
-// 启动页消失 + 精准显示信件内容（无任何裸露代码）
 window.addEventListener('load', function() {
   setTimeout(function() {
     const splash = document.getElementById('splash');
     const container = document.querySelector('.container');
     const card = document.querySelector('.card');
-    
-    // 启动页淡出
     if (splash) splash.style.opacity = '0';
-    
-    // 精准显示你的信件容器
     if (container) {
       container.style.opacity = '1';
       container.style.visibility = 'visible';
@@ -577,8 +557,6 @@ window.addEventListener('load', function() {
       card.style.visibility = 'visible';
       card.style.display = 'block';
     }
-
-    // 彻底隐藏启动页
     setTimeout(function() {
       if (splash) splash.style.display = 'none';
     }, 1200);
