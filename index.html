@@ -378,10 +378,70 @@
             line-height: 1.8;
             animation: breathe 2.5s ease-in-out infinite;
         }
+    /* 启动页专属样式 */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1.2s ease-out;
+}
+.signature-wrap {
+  position: relative;
+  font-size: 100px;
+  font-weight: 900;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+.signature-placeholder {
+  opacity: 0;
+}
+.signature {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+  color: #ffd700;
+  background: linear-gradient(90deg, #ffd700, #ffb300, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb300, 0 0 30px #ffd700;
+  animation: handwriting 10s ease-out forwards, sparkle 2s ease-in-out infinite 9.5s;
+}
+@keyframes handwriting {
+  0% { width: 0%; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
+}
+@keyframes sparkle {
+  0%, 100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb300; }
+  50% { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffb300, 0 0 60px #ffd700; }
+}
+
+/* 信件初始隐藏（仅这两行，精准控制） */
+.container, .card {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.2s ease-out;
+}
     </style>
 </head>
 
 <body>
+<div class="splash-screen" id="splash">
+  <div class="signature-wrap">
+    <div class="signature-placeholder">陈水娟</div>
+    <div class="signature">陈水娟</div>
+  </div>
+</div>
     <div class="container">
         <div class="card">
             <h1 class="title-fade-in" style="background: linear-gradient(90deg, #ff7f50, #ff4500, #9932cc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">陈水娟的专属页面</h1>
@@ -494,4 +554,35 @@ document.getElementById('playBtn').addEventListener('click', function() {
   this.textContent = '正在播放🎵';/* 张国辉写的！！！ */
   this.disabled = true;/* 张国辉写的！！！ */
 });
-</script></body></html><!-- 张国辉写的！！！ -->
+</script>
+<script>
+// 启动页消失 + 精准显示信件内容（无任何裸露代码）
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const splash = document.getElementById('splash');
+    const container = document.querySelector('.container');
+    const card = document.querySelector('.card');
+    
+    // 启动页淡出
+    if (splash) splash.style.opacity = '0';
+    
+    // 精准显示你的信件容器
+    if (container) {
+      container.style.opacity = '1';
+      container.style.visibility = 'visible';
+      container.style.display = 'block';
+    }
+    if (card) {
+      card.style.opacity = '1';
+      card.style.visibility = 'visible';
+      card.style.display = 'block';
+    }
+
+    // 彻底隐藏启动页
+    setTimeout(function() {
+      if (splash) splash.style.display = 'none';
+    }, 1200);
+  }, 10000);
+});
+</script>
+</body></html><!-- 张国辉写的！！！ -->
